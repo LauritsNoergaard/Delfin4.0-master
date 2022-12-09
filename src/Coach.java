@@ -8,7 +8,6 @@ public class Coach {
     Scanner in = new Scanner(System.in);
 
     ArrayList<Member> allMemberList = f.getAllMembersList();
-
     ArrayList<CompSwimmer> compList = f.getCompList();
     ArrayList<CompSwimmer> crawl = new ArrayList<>();
     ArrayList<CompSwimmer> breaststroke = new ArrayList<>();
@@ -132,7 +131,7 @@ public class Coach {
     private void sortTop5() {
         divideByDiscipline();
 
-        CompSwimmerSorter sortByPb = new CompSwimmerSorter(CompSwimmerSorter.ChosenSorter.PB);
+        CompSwimmerSorter sortByPb = new CompSwimmerSorter();
         crawl.sort(sortByPb);
         breaststroke.sort(sortByPb);
         backstroke.sort(sortByPb);
@@ -181,7 +180,7 @@ public class Coach {
 
             }
         }
-    }
+    } //Pair programming all
 }
 
 

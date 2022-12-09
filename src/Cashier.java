@@ -9,7 +9,7 @@ public class Cashier { //Pair programming all
     public void cashierMenu() {
         String[] cashierMenuChoices = {"1. View missing payments", "2. View payment status from ID",
                 "3. Register Payment", "9. Exit back to main menu"};
-        Menu cashierMenu = new Menu("Welcome back", "Pick the number:", cashierMenuChoices);
+        Menu cashierMenu = new Menu("---CASHIER MENU---", "Pick the number:", cashierMenuChoices);
         boolean runWhile = true;
         do {
             cashierMenu.printMenu();

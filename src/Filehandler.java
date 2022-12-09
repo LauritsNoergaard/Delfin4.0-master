@@ -16,7 +16,7 @@ public class Filehandler {
     public ArrayList getAllMembersList() {
         updateMemberList();
         return memberList;
-    }
+    }//Method written by Mathias
 
 
     public ArrayList getCompList() {
@@ -186,10 +186,11 @@ public class Filehandler {
         List<String> lines = Files.readAllLines(Path.of("memberData.txt"));
         list.set(tokenIndex, newData);
 
-        String newMemberData = list.get(0) + ";" + list.get(1) + ";" + list.get(2) + ";" + list.get(3) + ";" + list.get(4) + ";" + list.get(5) + ";"
-                + list.get(6) + ";" + list.get(7) + ";" + list.get(8) + ";" + list.get(9) + ";" + list.get(10) + ";";
+        String newMemberData = list.get(0) + ";" + list.get(1) + ";" + list.get(2) + ";" + list.get(3) + ";" +
+                list.get(4) + ";" + list.get(5) + ";" + list.get(6) + ";" + list.get(7) + ";" + list.get(8) + ";" +
+                list.get(9) + ";" + list.get(10) + ";";
 
         lines.set(memberId, newMemberData);
         Files.write(Path.of(fileName), lines);
-    }
+    }//Pair programming all
 }
