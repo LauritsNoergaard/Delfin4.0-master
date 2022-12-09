@@ -13,7 +13,6 @@ public class Filehandler {
     private ArrayList<FitnessSwimmer> fitnessList = new ArrayList<>();
     Ui ui = new Ui();
 
-    //Method written by Mathias
     public ArrayList getAllMembersList() {
         updateMemberList();
         return memberList;
@@ -162,7 +161,7 @@ public class Filehandler {
         }
     } //Method written by Mathias
 
-    //Method written by Mathias
+
     private void stringToComp(String compString) {
         String[] memberToken = compString.split(";");
         List<String> list = Arrays.asList(memberToken);

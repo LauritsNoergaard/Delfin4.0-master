@@ -1,6 +1,6 @@
 import java.time.LocalDateTime;
 
-public class Member {
+public class Member { //Pair programming all
 
     private String fName;
     private String lName;
@@ -12,7 +12,6 @@ public class Member {
     private boolean isActive;
 
     public Member(){
-
     }
 
     public Member(int memberID, String fName, String lName, int birthYear, boolean hasPaid, boolean isActive) {
@@ -64,5 +63,4 @@ public class Member {
     public boolean hasPaid(){
         return hasPaid;
     }
-
 }

@@ -138,8 +138,7 @@ public class Coach {
         backstroke.sort(sortByPb);
         butterfly.sort(sortByPb);
         medley.sort(sortByPb);
-    }
-
+    } //Emil
 
     private void viewTop5() {
         sortTop5();

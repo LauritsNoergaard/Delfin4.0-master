@@ -44,7 +44,7 @@ public class Chairman {
         ui.println("New member was added with the ID:" + newId);
     } //Mathias
 
-    //    Method written by Emil
+
     public void printFitnessMembers() {
         ArrayList<FitnessSwimmer> fitList = filehandler.getFitnessList();
         for (int i = 0; i < fitList.size(); i++) {
@@ -52,9 +52,8 @@ public class Chairman {
                     fitList.get(i).getfName(), fitList.get(i).getlName(), fitList.get(i).getBirthYear());
         }
 
-    }
+    }// Method written by Laurits
 
-    //    Method written by Emil
     public void printCompMembers() {
         ArrayList<CompSwimmer> compList = filehandler.getCompList();
         for (int i = 0; i < compList.size(); i++) {

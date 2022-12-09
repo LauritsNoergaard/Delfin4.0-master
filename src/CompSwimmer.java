@@ -1,4 +1,4 @@
-public class CompSwimmer extends Member {
+public class CompSwimmer extends Member {//Pair programming all
 
     private double pb;
     private String discipline;

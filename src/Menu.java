@@ -36,4 +36,3 @@ public class Menu { //Patrick
         return choice;
     }
 }
-
