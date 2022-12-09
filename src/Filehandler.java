@@ -19,19 +19,17 @@ public class Filehandler {
         return memberList;
     }
 
-    //Method written by Mathias
+
     public ArrayList getCompList() {
         updateCompList();
         return compList;
-    }
+    } //Method written by Mathias
 
-    //Method written by Mathias
     public ArrayList getFitnessList() {
         updateFitnessList();
         return fitnessList;
-    }
+    } //Method written by Mathias
 
-    //TODO Method written by:
     public void checkMember() {
         ArrayList<Member> memberList = getAllMembersList();
         int memberId;
@@ -49,9 +47,8 @@ public class Filehandler {
         } catch (Exception e) {
             System.out.println("ID: " + memberId + " is invalid or not in the system.");
         }
-    }
+    } //Method written by Martin
 
-    //Method written by Mathias
     public void saveNewMemberInFile(String newMemberData) {
         try {
             FileWriter myWriter = new FileWriter(fileName, true);
@@ -62,10 +59,8 @@ public class Filehandler {
             ui.println("Something went wrong in FileHandler.saveNewMemberInFile()...");
             e.printStackTrace();
         }
-    }
-    //Method written by Mathias
+    } //Method written by Mathias
 
-    //Method written by Mathias
     public int nextAvailableMemberId() throws IOException {
         int nextId = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
@@ -74,9 +69,9 @@ public class Filehandler {
             }
         }
         return nextId;
-    }
+    } //Method written by Mathias
 
-    //Method written by everyone (Pair-programming)
+
     public void editMember(int memberID, int tokenIndex, String newData) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
@@ -95,9 +90,8 @@ public class Filehandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    } //Pair programming all
 
-    //Method written by Mathias
     private void updateMemberList() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
@@ -110,9 +104,8 @@ public class Filehandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    } //Method written by Mathias
 
-    //Method written by Mathias
     private void updateFitnessList() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
@@ -125,9 +118,8 @@ public class Filehandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    } //Method written by Mathias
 
-    //Method written by Mathias
     private void updateCompList() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
@@ -140,9 +132,8 @@ public class Filehandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    } //Method written by Mathias
 
-    //Method written by Mathias
     private void stringToMember(String memberString) {
         String[] memberToken = memberString.split(";");
         List<String> list = Arrays.asList(memberToken);
@@ -155,9 +146,8 @@ public class Filehandler {
 
         Member newMember = new Member(memberID, fName, lName, birthYear, hasPaid, isActive);
         memberList.add(newMember);
-    }
+    } //Method written by Mathias
 
-    //Method written by Mathias
     private void stringToFitness(String fitnessString) {
         String[] memberToken = fitnessString.split(";");
         List<String> list = Arrays.asList(memberToken);
@@ -170,7 +160,7 @@ public class Filehandler {
             FitnessSwimmer newFitnessMember = new FitnessSwimmer(memberID, fName, lName, birthYear);
             fitnessList.add(newFitnessMember);
         }
-    }
+    } //Method written by Mathias
 
     //Method written by Mathias
     private void stringToComp(String compString) {
@@ -190,9 +180,8 @@ public class Filehandler {
             CompSwimmer newCompMember = new CompSwimmer(memberID, fName, lName, birthYear, discipline, time, placeInComp);
             compList.add(newCompMember);
         }
-    }
+    }//Method written by Mathias
 
-    //Method written by everyone (Pair-programming)
     private void editFile(int tokenIndex, String newData, List<String> list, int memberId) throws IOException {
 
         List<String> lines = Files.readAllLines(Path.of("memberData.txt"));

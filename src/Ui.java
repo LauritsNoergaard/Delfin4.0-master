@@ -38,7 +38,6 @@ public class Ui {
         return number;
     }
 
-    //    Method written by Emil, Laurits, Mathias & Martin
     public String readBirthYear() {
         boolean validChoice = false;
         int number = -1;
@@ -56,9 +55,8 @@ public class Ui {
             }
         }
         return String.valueOf(number);
-    }
+    } //Pair programming all
 
-    //    Method written by Emil, Laurits, Mathias & Martin
     public boolean intToBool() {
         boolean validChoice = false;
         int number = -1;
@@ -82,7 +80,7 @@ public class Ui {
         } else {
             return false;
         }
-    }
+    } //Pair programming all
 
     public void logo() {
         System.out.println("▓█████▄ ▓█████  ██▓      █████▒██▓ ███▄    █ ▓█████  ███▄    █");
@@ -95,5 +93,5 @@ public class Ui {
         System.out.println(" ░ ░  ░    ░     ░ ░    ░ ░    ▒ ░   ░   ░ ░    ░      ░   ░ ░ ");
         System.out.println("   ░       ░  ░    ░  ░        ░           ░    ░  ░         ░ ");
         System.out.println(" ░   ");
-    }
+    } //Laurits
 }

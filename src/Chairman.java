@@ -10,7 +10,7 @@ public class Chairman {
     public void chairmanMenu() throws IOException {
         String[] chairmanMenuChoices = {"1. Create new member", "2. Look up member with a given memberID",
                 "3. Print all fitness members", "4. Print all competition members", "9. Exit chairman menu"};
-        Menu chairmanMenu = new Menu("Chairman Menu", "Pick the number:", chairmanMenuChoices);
+        Menu chairmanMenu = new Menu("---CHAIRMAN MENU---", "Pick the number: ", chairmanMenuChoices);
         boolean runWhile = true;
         do {
             chairmanMenu.printMenu();
@@ -36,13 +36,13 @@ public class Chairman {
                     break;
             }
         } while (runWhile);
-    }
+    } //Pair programming all
 
     public void createMember() throws IOException {
         int newId = filehandler.nextAvailableMemberId();
         filehandler.saveNewMemberInFile(userInputForNewMember());
         ui.println("New member was added with the ID:" + newId);
-    }
+    } //Mathias
 
     //    Method written by Emil
     public void printFitnessMembers() {
@@ -62,9 +62,8 @@ public class Chairman {
                     compList.get(i).getlName() + ", " + compList.get(i).getBirthYear() + ", " +
                     compList.get(i).getPlaceInComp() + "\n");
         }
-    }
+    }//    Method written by Emil
 
-    //Method written by everyone (Pair-programming)
     private String userInputForNewMember() {
 
         ui.println("Insert members first name: ");
@@ -89,9 +88,8 @@ public class Chairman {
                 + compChoice + ";" + "0.0" + ";" + hasPayed + ";" + placeInComp + ";";
         return newMemberData;
 
-    }
+    } //Method written by everyone (Pair-programming)
 
-    //Method written by everyone (Pair-programming)
     private String compChoice() {
         String choice = "";
 
@@ -115,5 +113,5 @@ public class Chairman {
         }
 
         return choice;
-    }
+    } //Method written by everyone (Pair-programming)
 }

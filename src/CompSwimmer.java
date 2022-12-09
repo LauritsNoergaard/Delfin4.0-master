@@ -5,7 +5,6 @@ public class CompSwimmer extends Member {
 
     String placeInComp = "0";
 
-    //TODO Try incorporating competitions and 1st, 2nd, 3rd place
     public CompSwimmer(int memberID, String fName, String lName, int birthYear, String discipline, double pb, String placeInComp) {
         this.discipline = discipline;
         this.pb = pb;

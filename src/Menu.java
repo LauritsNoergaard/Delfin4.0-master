@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Menu {
+public class Menu { //Patrick
 
     private String menuHeader;
     private String leadText;

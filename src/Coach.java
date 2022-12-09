@@ -18,7 +18,7 @@ public class Coach {
 
 
     public void coachMenu() {
-        Menu cMenu = new Menu("---COACH MENU---", "...", new String[]{"1. View teams sorted by age",
+        Menu cMenu = new Menu("---COACH MENU---", "Type a number: ", new String[]{"1. View teams sorted by age",
                 "2. View top 5", "3. Register new personal records",
                 "4. View swimmers personal best", "5. Register new place in competition", "9. Exit coach menu"});
         boolean runWhile = true;
@@ -34,9 +34,8 @@ public class Coach {
                 default -> ui.println("Invalid choice");
             }
         } while (runWhile);
-    }
+    } //Pair programming all
 
-    //Method written by Emil, Laurits & Mathias
     private void viewAgeSortedTeams() {
         ArrayList<CompSwimmer> compList = f.getCompList();
 
@@ -53,9 +52,8 @@ public class Coach {
                 ui.println(compList.get(i).getfName() + " " + compList.get(i).getlName());
             }
         }
-    }
+    } //Method written by Emil, Laurits & Mathias
 
-    // Method written by Mathias, Emil, Laurits & Martin
     private void viewCompPersonalRecord() {
         int memberId;
         memberId = ui.readInt("Enter member ID: ");
@@ -71,7 +69,7 @@ public class Coach {
         if (!validComp) {
             ui.println("The member with the given Member Id is not a competition swimmer, or does not exist  ¯\\_( ͡❛ ͜ʖ ͡❛)_/¯");
         }
-    }
+    } // Pair programming all
 
     private void registerNewRecord() {
         boolean validChoice = false;
@@ -97,7 +95,7 @@ public class Coach {
 
     } //Laurits & Martin
 
-    private void registerPlaceInComp() {  //FIXME Hmm??
+    private void registerPlaceInComp() {
         boolean validChoice = false;
         int memberID = -1;
         memberID = ui.readInt("Please input the ID of the member you want to change: ");
@@ -105,9 +103,8 @@ public class Coach {
         if (memberID > allMemberList.size() || memberID < 0) {
             ui.println("This member does not exist");
         } else {
-            ui.print("Please type the place the swimmer came in: 1/2/3: ");
             int placeInComp = -1;
-
+            ui.print("Please type the place the swimmer came in: 1/2/3: ");
             while (!validChoice) {
                 if (in.hasNextInt()) {
                     placeInComp = in.nextInt();
@@ -118,7 +115,7 @@ public class Coach {
             }
             f.editMember(memberID, 10, String.valueOf(placeInComp));
         }
-    }
+    } //Laurits
 
     private void divideByDiscipline() {
         for (int i = 0; i < compList.size(); i++) {
@@ -130,7 +127,7 @@ public class Coach {
                 case "Medley" -> medley.add(compList.get(i));
             }
         }
-    }
+    } //Emil
 
     private void sortTop5() {
         divideByDiscipline();
@@ -164,7 +161,7 @@ public class Coach {
             case 4 -> printTop5(backstroke, "BACKSTROKE");
             case 5 -> printTop5(medley, "MEDLEY");
         }
-    } //Alle med pair-programming
+    } //Pair programming all
 
     private void printTop5(ArrayList<CompSwimmer> listname, String discipline) { //Alle med pair-programming
         ui.println("--------------------------------");

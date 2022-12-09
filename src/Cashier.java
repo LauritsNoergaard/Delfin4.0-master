@@ -1,10 +1,7 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class Cashier { //PairProgramming
-
-    //TODO opdater betalingsstaus ved nyt år   //NeedToHave???
-
+public class Cashier { //Pair programming all
     Ui ui = new Ui();
     Filehandler f = new Filehandler();
     ArrayList<Member> allMemberList = f.getAllMembersList();
