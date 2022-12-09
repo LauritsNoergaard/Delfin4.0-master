@@ -87,7 +87,7 @@ public class Chairman {
                 + compChoice + ";" + "0.0" + ";" + hasPayed + ";" + placeInComp + ";";
         return newMemberData;
 
-    } //Method written by everyone (Pair-programming)
+    } //Pair programming all
 
     private String compChoice() {
         String choice = "";
@@ -112,5 +112,5 @@ public class Chairman {
         }
 
         return choice;
-    } //Method written by everyone (Pair-programming)
+    } //Pair programing all
 }
