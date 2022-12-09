@@ -1,0 +1,57 @@
+
+Member:
+    id (static)
+    name
+    birthYear
+    boolean isJunior (Calculated in constructor)
+    boolean isContestSwimmer
+    boolean isPassive
+
+    TODO skal member extends/implement nogle STATS (variable/methods) til at rank dem
+
+UI
+    Chairman
+        prints member data to edit member
+
+    Trainer
+        prints member rank
+        prints best 5 members in chosen dicipline
+
+
+File
+    har alle info om member. kunne se sådan ud nedenunder, gøre brug af tokens? (;)
+    1;name;birthyear;
+
+
+Menu
+
+Run
+
+Staff? (abstract)
+    Trainer
+    Chairman
+    Cashier
+
+Sorter
+
+
+File handler og chairman
+
+
+skal man kunne oprette sig selv som active/passive
+
+    return Comp array
+    return Fitness array
+    return AllMember array
+    TODO return active array?
+
+
+
+
+
+
+
+
+
+
+

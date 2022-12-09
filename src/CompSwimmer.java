@@ -1,0 +1,30 @@
+public class CompSwimmer extends Member {
+
+    private double pb;
+    private String discipline;
+
+    String placeInComp = "0";
+
+    //TODO Try incorporating competitions and 1st, 2nd, 3rd place
+    public CompSwimmer(int memberID, String fName, String lName, int birthYear, String discipline, double pb, String placeInComp) {
+        this.discipline = discipline;
+        this.pb = pb;
+        this.placeInComp = placeInComp;
+        setMemberID(memberID);
+        setFName(fName);
+        setLName(lName);
+        setBirthYear(birthYear);
+    }
+
+    public double getPb() {
+        return pb;
+    }
+
+    public String getDiscipline() {
+        return discipline;
+    }
+
+    public String getPlaceInComp() {
+        return placeInComp;
+    }
+}
