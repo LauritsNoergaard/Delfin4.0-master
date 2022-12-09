@@ -36,7 +36,7 @@ public class Coach {
     } //Pair programming all
 
     private void viewAgeSortedTeams() {
-        ArrayList<CompSwimmer> compList = f.getCompList();
+
 
         ui.println("Competition swimmers under 18: ");
         for (int i = 0; i < compList.size(); i++) {
