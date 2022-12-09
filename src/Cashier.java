@@ -15,13 +15,13 @@ public class Cashier { //Pair programming all
             cashierMenu.printMenu();
             switch (cashierMenu.readChoice()) {
                 case 1:
-                    viewMissingPayments();
+                    new Cashier().viewMissingPayments();
                     break;
                 case 2:
-                    viewMemberPaymentStatus();
+                    new Cashier().viewMemberPaymentStatus();
                     break;
                 case 3:
-                    registerPayment();
+                    new Cashier().registerPayment();
                     break;
                 case 9:
                     ui.println("Going back to main menu...");

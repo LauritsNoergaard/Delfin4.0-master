@@ -16,16 +16,16 @@ public class Chairman {
             chairmanMenu.printMenu();
             switch (chairmanMenu.readChoice()) {
                 case 1:
-                    createMember();
+                    new Chairman().createMember();
                     break;
                 case 2:
-                    filehandler.checkMember();
+                    new Filehandler().checkMember();
                     break;
                 case 3:
-                    printFitnessMembers();
+                    new Chairman().printFitnessMembers();
                     break;
                 case 4:
-                    printCompMembers();
+                    new Chairman().printCompMembers();
                     break;
                 case 9:
                     ui.println("Going back to main menu...");
@@ -44,14 +44,12 @@ public class Chairman {
         ui.println("New member was added with the ID:" + newId);
     } //Mathias
 
-
     public void printFitnessMembers() {
         ArrayList<FitnessSwimmer> fitList = filehandler.getFitnessList();
         for (int i = 0; i < fitList.size(); i++) {
             System.out.printf("ID: %-3d %-10s %-12s %-4d\n", fitList.get(i).getMemberID(),
                     fitList.get(i).getfName(), fitList.get(i).getlName(), fitList.get(i).getBirthYear());
         }
-
     }// Method written by Laurits
 
     public void printCompMembers() {
